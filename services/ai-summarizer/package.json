@@ -1,0 +1,23 @@
+{
+  "name": "@iot-lab/ai-summarizer",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "./dist/index.js",
+  "scripts": {
+    "dev": "tsx src/index.ts",
+    "build": "tsc",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@iot-lab/common": "*",
+    "axios": "^1.6.5",
+    "zod": "^3.22.4",
+    "dotenv": "^16.4.1",
+    "pino": "^8.17.2"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.5.3"
+  }
+}

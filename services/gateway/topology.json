@@ -1,0 +1,28 @@
+{
+  "links": {
+    "L12": {
+      "from": "n1",
+      "to": "n2",
+      "bwMbps": 20,
+      "dpMs": 2,
+      "jitterMs": 1,
+      "loss": 0.001
+    },
+    "L23": {
+      "from": "n2",
+      "to": "n3",
+      "bwMbps": 10,
+      "dpMs": 3,
+      "jitterMs": 2,
+      "loss": 0.002
+    },
+    "L13": {
+      "from": "n1",
+      "to": "n3",
+      "bwMbps": 10,
+      "dpMs": 10,
+      "jitterMs": 6,
+      "loss": 0.005
+    }
+  }
+}

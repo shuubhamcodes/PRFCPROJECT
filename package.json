@@ -1,0 +1,42 @@
+{
+  "name": "iot-resilienceprfc-lab",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "npm run dev --workspaces",
+    "build": "npm run build --workspaces",
+    "typecheck": "npm run typecheck --workspaces",
+    "start:edge": "npm run dev --workspace=services/edge-server",
+    "start:core": "npm run dev --workspace=services/core-server",
+    "start:cloud": "npm run dev --workspace=services/cloud-server",
+    "start:gateway": "cross-env ROUTING_MODE=virtual npm run dev --workspace=services/gateway",
+    "start:gateway:simple": "cross-env ROUTING_MODE=virtual TOPOLOGY_FILE=simple-topology.json npm run dev --workspace=services/gateway",
+    "start:gateway:prfc": "cross-env ROUTING_MODE=virtual npm run dev --workspace=services/gateway",
+    "start:simulator": "npm run dev --workspace=services/simulator",
+    "start:dashboard": "npm run dev --workspace=apps/dashboard",
+    "demo:normal": "cross-env ROUTING_MODE=virtual FAULT_KIND=none npm run dev --workspace=services/simulator",
+    "demo:cpu": "cross-env ROUTING_MODE=virtual FAULT_KIND=virtual_node FAULT_TARGET=11 FAULT_START_SEC=30 FAULT_DURATION_SEC=60 FAULT_SEVERITY=high npm run dev --workspace=services/simulator",
+    "demo:cpu:extreme": "cross-env ROUTING_MODE=virtual FAULT_KIND=link_down FAULT_TARGET=L13 FAULT_START_SEC=30 FAULT_DURATION_SEC=60 npm run dev --workspace=services/simulator",
+    "demo:bw": "cross-env ROUTING_MODE=virtual FAULT_KIND=bw_drop FAULT_TARGET=L12 FAULT_START_SEC=30 FAULT_DURATION_SEC=60 npm run dev --workspace=services/simulator",
+    "demo:link": "cross-env ROUTING_MODE=virtual FAULT_KIND=link_down FAULT_TARGET=L23 FAULT_START_SEC=30 FAULT_DURATION_SEC=60 npm run dev --workspace=services/simulator",
+    "demo:virtual-node": "cross-env ROUTING_MODE=virtual FAULT_KIND=virtual_node FAULT_TARGET=9 FAULT_START_SEC=30 FAULT_DURATION_SEC=60 npm run dev --workspace=services/simulator",
+    "demo:simple:normal": "cross-env ROUTING_MODE=virtual FAULT_KIND=none npm run dev --workspace=services/simulator",
+    "demo:simple:cpu": "cross-env ROUTING_MODE=virtual FAULT_KIND=cpu_overload FAULT_TARGET=n2 FAULT_START_SEC=30 FAULT_DURATION_SEC=60 npm run dev --workspace=services/simulator",
+    "demo:simple:link": "cross-env ROUTING_MODE=virtual FAULT_KIND=link_down FAULT_TARGET=L23 FAULT_START_SEC=30 FAULT_DURATION_SEC=60 npm run dev --workspace=services/simulator",
+    "test:virtual-routing": "curl -X POST http://localhost:4000/api/test/virtual-routing -H \"Content-Type: application/json\" -d \"{\\\"sourceId\\\": 1, \\\"destId\\\": 19, \\\"k\\\": 5}\"",
+    "test:simple-routing": "curl -X POST http://localhost:4000/api/test/virtual-routing -H \"Content-Type: application/json\" -d \"{\\\"sourceId\\\": 1, \\\"destId\\\": 3, \\\"k\\\": 3}\"",
+    "monitor:prfc": "npm run monitor --workspace=services/gateway",
+    "health": "curl http://localhost:4020/health && curl http://localhost:4025/health && curl http://localhost:4030/health && curl http://localhost:4000/prfc/state"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.0",
+    "cross-env": "^10.1.0",
+    "typescript": "^5.5.3"
+  },
+  "workspaces": [
+    "packages/*",
+    "services/*",
+    "apps/*"
+  ]
+}

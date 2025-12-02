@@ -1,0 +1,542 @@
+{
+  "nodes": [
+    {
+      "id": 1,
+      "tier": "edge",
+      "cpu_ev_sec": 50,
+      "buffer_kb": 1000,
+      "quality": "high",
+      "physical_map": "n1:4020"
+    },
+    {
+      "id": 2,
+      "tier": "edge",
+      "cpu_ev_sec": 30,
+      "buffer_kb": 500,
+      "quality": "low",
+      "physical_map": "n1:4020"
+    },
+    {
+      "id": 3,
+      "tier": "edge",
+      "cpu_ev_sec": 50,
+      "buffer_kb": 1000,
+      "quality": "high",
+      "physical_map": "n1:4020"
+    },
+    {
+      "id": 4,
+      "tier": "edge",
+      "cpu_ev_sec": 40,
+      "buffer_kb": 800,
+      "quality": "medium",
+      "physical_map": "n1:4020"
+    },
+    {
+      "id": 5,
+      "tier": "edge",
+      "cpu_ev_sec": 20,
+      "buffer_kb": 300,
+      "quality": "low",
+      "physical_map": "n1:4020"
+    },
+    {
+      "id": 6,
+      "tier": "edge",
+      "cpu_ev_sec": 50,
+      "buffer_kb": 1000,
+      "quality": "high",
+      "physical_map": "n1:4020"
+    },
+    {
+      "id": 7,
+      "tier": "edge",
+      "cpu_ev_sec": 45,
+      "buffer_kb": 900,
+      "quality": "high",
+      "physical_map": "n1:4020"
+    },
+    {
+      "id": 8,
+      "tier": "edge",
+      "cpu_ev_sec": 35,
+      "buffer_kb": 700,
+      "quality": "medium",
+      "physical_map": "n1:4020"
+    },
+    {
+      "id": 9,
+      "tier": "core",
+      "cpu_ev_sec": 90,
+      "bw_mbps": 80,
+      "quality": "high",
+      "physical_map": "n2:4025"
+    },
+    {
+      "id": 10,
+      "tier": "core",
+      "cpu_ev_sec": 85,
+      "bw_mbps": 75,
+      "quality": "high",
+      "physical_map": "n2:4025"
+    },
+    {
+      "id": 11,
+      "tier": "core",
+      "cpu_ev_sec": 100,
+      "bw_mbps": 100,
+      "quality": "high",
+      "physical_map": "n2:4025"
+    },
+    {
+      "id": 12,
+      "tier": "core",
+      "cpu_ev_sec": 80,
+      "bw_mbps": 50,
+      "quality": "medium",
+      "physical_map": "n2:4025"
+    },
+    {
+      "id": 13,
+      "tier": "core",
+      "cpu_ev_sec": 90,
+      "bw_mbps": 80,
+      "quality": "high",
+      "physical_map": "n2:4025"
+    },
+    {
+      "id": 14,
+      "tier": "core",
+      "cpu_ev_sec": 70,
+      "bw_mbps": 60,
+      "quality": "medium",
+      "physical_map": "n2:4025"
+    },
+    {
+      "id": 15,
+      "tier": "core",
+      "cpu_ev_sec": 95,
+      "bw_mbps": 90,
+      "quality": "high",
+      "physical_map": "n2:4025"
+    },
+    {
+      "id": 16,
+      "tier": "core",
+      "cpu_ev_sec": 100,
+      "bw_mbps": 100,
+      "quality": "high",
+      "physical_map": "n2:4025"
+    },
+    {
+      "id": 17,
+      "tier": "core",
+      "cpu_ev_sec": 75,
+      "bw_mbps": 65,
+      "quality": "medium",
+      "physical_map": "n2:4025"
+    },
+    {
+      "id": 18,
+      "tier": "core",
+      "cpu_ev_sec": 85,
+      "bw_mbps": 75,
+      "quality": "high",
+      "physical_map": "n2:4025"
+    },
+    {
+      "id": 22,
+      "tier": "core",
+      "cpu_ev_sec": 60,
+      "bw_mbps": 30,
+      "quality": "low",
+      "physical_map": "n2:4025"
+    },
+    {
+      "id": 19,
+      "tier": "cloud",
+      "cpu_ev_sec": 180,
+      "storage": "high",
+      "quality": "premium",
+      "physical_map": "n3:4030"
+    },
+    {
+      "id": 20,
+      "tier": "cloud",
+      "cpu_ev_sec": 200,
+      "storage": "unlimited",
+      "quality": "premium",
+      "physical_map": "n3:4030"
+    },
+    {
+      "id": 21,
+      "tier": "cloud",
+      "cpu_ev_sec": 150,
+      "storage": "medium",
+      "quality": "standard",
+      "physical_map": "n3:4030"
+    },
+    {
+      "id": 23,
+      "tier": "cloud",
+      "cpu_ev_sec": 120,
+      "storage": "low",
+      "quality": "budget",
+      "physical_map": "n3:4030"
+    },
+    {
+      "id": 24,
+      "tier": "cloud",
+      "cpu_ev_sec": 100,
+      "storage": "low",
+      "quality": "budget",
+      "physical_map": "n3:4030"
+    }
+  ],
+  "links": [
+    {
+      "u": 1,
+      "v": 2,
+      "bw_mbps": 20,
+      "delay_ms": 3,
+      "jitter_ms": 1,
+      "loss_rate": 0.003
+    },
+    {
+      "u": 1,
+      "v": 6,
+      "bw_mbps": 20,
+      "delay_ms": 2,
+      "jitter_ms": 1,
+      "loss_rate": 0.002
+    },
+    {
+      "u": 2,
+      "v": 6,
+      "bw_mbps": 20,
+      "delay_ms": 4,
+      "jitter_ms": 2,
+      "loss_rate": 0.004
+    },
+    {
+      "u": 2,
+      "v": 7,
+      "bw_mbps": 20,
+      "delay_ms": 3,
+      "jitter_ms": 1,
+      "loss_rate": 0.003
+    },
+    {
+      "u": 3,
+      "v": 4,
+      "bw_mbps": 20,
+      "delay_ms": 2,
+      "jitter_ms": 1,
+      "loss_rate": 0.002
+    },
+    {
+      "u": 4,
+      "v": 8,
+      "bw_mbps": 20,
+      "delay_ms": 5,
+      "jitter_ms": 2,
+      "loss_rate": 0.005
+    },
+    {
+      "u": 5,
+      "v": 7,
+      "bw_mbps": 20,
+      "delay_ms": 4,
+      "jitter_ms": 2,
+      "loss_rate": 0.004
+    },
+    {
+      "u": 6,
+      "v": 7,
+      "bw_mbps": 20,
+      "delay_ms": 3,
+      "jitter_ms": 1,
+      "loss_rate": 0.003
+    },
+    {
+      "u": 1,
+      "v": 11,
+      "bw_mbps": 50,
+      "delay_ms": 6,
+      "jitter_ms": 2,
+      "loss_rate": 0.002
+    },
+    {
+      "u": 1,
+      "v": 9,
+      "bw_mbps": 50,
+      "delay_ms": 8,
+      "jitter_ms": 3,
+      "loss_rate": 0.003
+    },
+    {
+      "u": 2,
+      "v": 9,
+      "bw_mbps": 50,
+      "delay_ms": 7,
+      "jitter_ms": 2,
+      "loss_rate": 0.002
+    },
+    {
+      "u": 3,
+      "v": 10,
+      "bw_mbps": 50,
+      "delay_ms": 5,
+      "jitter_ms": 2,
+      "loss_rate": 0.001
+    },
+    {
+      "u": 4,
+      "v": 12,
+      "bw_mbps": 50,
+      "delay_ms": 9,
+      "jitter_ms": 3,
+      "loss_rate": 0.003
+    },
+    {
+      "u": 5,
+      "v": 14,
+      "bw_mbps": 50,
+      "delay_ms": 10,
+      "jitter_ms": 4,
+      "loss_rate": 0.003
+    },
+    {
+      "u": 6,
+      "v": 11,
+      "bw_mbps": 50,
+      "delay_ms": 5,
+      "jitter_ms": 2,
+      "loss_rate": 0.001
+    },
+    {
+      "u": 6,
+      "v": 9,
+      "bw_mbps": 50,
+      "delay_ms": 7,
+      "jitter_ms": 2,
+      "loss_rate": 0.002
+    },
+    {
+      "u": 7,
+      "v": 13,
+      "bw_mbps": 50,
+      "delay_ms": 6,
+      "jitter_ms": 2,
+      "loss_rate": 0.002
+    },
+    {
+      "u": 8,
+      "v": 14,
+      "bw_mbps": 50,
+      "delay_ms": 8,
+      "jitter_ms": 3,
+      "loss_rate": 0.002
+    },
+    {
+      "u": 9,
+      "v": 10,
+      "bw_mbps": 100,
+      "delay_ms": 4,
+      "jitter_ms": 1,
+      "loss_rate": 0.001
+    },
+    {
+      "u": 9,
+      "v": 11,
+      "bw_mbps": 100,
+      "delay_ms": 3,
+      "jitter_ms": 1,
+      "loss_rate": 0.001
+    },
+    {
+      "u": 9,
+      "v": 12,
+      "bw_mbps": 100,
+      "delay_ms": 5,
+      "jitter_ms": 2,
+      "loss_rate": 0.002
+    },
+    {
+      "u": 10,
+      "v": 11,
+      "bw_mbps": 100,
+      "delay_ms": 3,
+      "jitter_ms": 1,
+      "loss_rate": 0.001
+    },
+    {
+      "u": 11,
+      "v": 12,
+      "bw_mbps": 100,
+      "delay_ms": 4,
+      "jitter_ms": 1,
+      "loss_rate": 0.001
+    },
+    {
+      "u": 11,
+      "v": 15,
+      "bw_mbps": 100,
+      "delay_ms": 3,
+      "jitter_ms": 1,
+      "loss_rate": 0.001
+    },
+    {
+      "u": 12,
+      "v": 16,
+      "bw_mbps": 100,
+      "delay_ms": 6,
+      "jitter_ms": 2,
+      "loss_rate": 0.002
+    },
+    {
+      "u": 13,
+      "v": 14,
+      "bw_mbps": 100,
+      "delay_ms": 5,
+      "jitter_ms": 2,
+      "loss_rate": 0.002
+    },
+    {
+      "u": 13,
+      "v": 17,
+      "bw_mbps": 100,
+      "delay_ms": 4,
+      "jitter_ms": 1,
+      "loss_rate": 0.001
+    },
+    {
+      "u": 14,
+      "v": 22,
+      "bw_mbps": 100,
+      "delay_ms": 7,
+      "jitter_ms": 3,
+      "loss_rate": 0.002
+    },
+    {
+      "u": 15,
+      "v": 16,
+      "bw_mbps": 100,
+      "delay_ms": 3,
+      "jitter_ms": 1,
+      "loss_rate": 0.001
+    },
+    {
+      "u": 16,
+      "v": 17,
+      "bw_mbps": 100,
+      "delay_ms": 5,
+      "jitter_ms": 2,
+      "loss_rate": 0.002
+    },
+    {
+      "u": 17,
+      "v": 18,
+      "bw_mbps": 100,
+      "delay_ms": 4,
+      "jitter_ms": 1,
+      "loss_rate": 0.001
+    },
+    {
+      "u": 10,
+      "v": 19,
+      "bw_mbps": 100,
+      "delay_ms": 12,
+      "jitter_ms": 4,
+      "loss_rate": 0.001
+    },
+    {
+      "u": 11,
+      "v": 20,
+      "bw_mbps": 100,
+      "delay_ms": 10,
+      "jitter_ms": 3,
+      "loss_rate": 0.001
+    },
+    {
+      "u": 12,
+      "v": 21,
+      "bw_mbps": 100,
+      "delay_ms": 15,
+      "jitter_ms": 5,
+      "loss_rate": 0.001
+    },
+    {
+      "u": 15,
+      "v": 20,
+      "bw_mbps": 100,
+      "delay_ms": 11,
+      "jitter_ms": 3,
+      "loss_rate": 0.001
+    },
+    {
+      "u": 16,
+      "v": 21,
+      "bw_mbps": 100,
+      "delay_ms": 13,
+      "jitter_ms": 4,
+      "loss_rate": 0.001
+    },
+    {
+      "u": 16,
+      "v": 20,
+      "bw_mbps": 100,
+      "delay_ms": 12,
+      "jitter_ms": 4,
+      "loss_rate": 0.001
+    },
+    {
+      "u": 17,
+      "v": 23,
+      "bw_mbps": 100,
+      "delay_ms": 18,
+      "jitter_ms": 6,
+      "loss_rate": 0.001
+    },
+    {
+      "u": 18,
+      "v": 23,
+      "bw_mbps": 100,
+      "delay_ms": 16,
+      "jitter_ms": 5,
+      "loss_rate": 0.001
+    },
+    {
+      "u": 22,
+      "v": 24,
+      "bw_mbps": 100,
+      "delay_ms": 20,
+      "jitter_ms": 7,
+      "loss_rate": 0.001
+    },
+    {
+      "u": 19,
+      "v": 20,
+      "bw_mbps": 100,
+      "delay_ms": 5,
+      "jitter_ms": 2,
+      "loss_rate": 0.001
+    },
+    {
+      "u": 20,
+      "v": 21,
+      "bw_mbps": 100,
+      "delay_ms": 6,
+      "jitter_ms": 2,
+      "loss_rate": 0.001
+    },
+    {
+      "u": 23,
+      "v": 24,
+      "bw_mbps": 100,
+      "delay_ms": 8,
+      "jitter_ms": 3,
+      "loss_rate": 0.001
+    }
+  ]
+}

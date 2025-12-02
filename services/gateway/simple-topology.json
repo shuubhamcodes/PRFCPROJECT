@@ -1,0 +1,54 @@
+{
+  "nodes": [
+    {
+      "id": 1,
+      "tier": "edge",
+      "physical_map": "n1:4020",
+      "cpu_ev_sec": 100,
+      "buffer_kb": 1000,
+      "quality": "high"
+    },
+    {
+      "id": 2,
+      "tier": "core",
+      "physical_map": "n2:4025",
+      "cpu_ev_sec": 200,
+      "bw_mbps": 100,
+      "quality": "high"
+    },
+    {
+      "id": 3,
+      "tier": "cloud",
+      "physical_map": "n3:4030",
+      "cpu_ev_sec": 500,
+      "storage": "unlimited",
+      "quality": "premium"
+    }
+  ],
+  "links": [
+    {
+      "u": 1,
+      "v": 2,
+      "bw_mbps": 50,
+      "delay_ms": 5,
+      "jitter_ms": 2,
+      "loss_rate": 0.001
+    },
+    {
+      "u": 2,
+      "v": 3,
+      "bw_mbps": 100,
+      "delay_ms": 10,
+      "jitter_ms": 3,
+      "loss_rate": 0.002
+    },
+    {
+      "u": 1,
+      "v": 3,
+      "bw_mbps": 30,
+      "delay_ms": 20,
+      "jitter_ms": 6,
+      "loss_rate": 0.005
+    }
+  ]
+}
